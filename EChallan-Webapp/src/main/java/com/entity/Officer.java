@@ -13,19 +13,14 @@ public class Officer {
 	private String branch;
 	private String city;
 	private String state;
-	
+	private String pincode;	
 	
 	
 	public Officer() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	@Override
-	public String toString() {
-		return "Officer [id=" + id + ", name=" + name + ", phone=" + phone + ", idcard=" + idcard + ", design=" + design
-				+ ", dob=" + dob + ", email=" + email + ", password=" + password + ", branch=" + branch + ", city="
-				+ city + ", state=" + state + ", pincode=" + pincode + "]";
-	}
+	
 	public int getId() {
 		return id;
 	}
@@ -98,5 +93,13 @@ public class Officer {
 	public void setPincode(String pincode) {
 		this.pincode = pincode;
 	}
-	private String pincode;
+	
+	
+	@Override
+	public String toString() {
+		return "Officer [id=" + id + ", name=" + name + ", phone=" + phone + ", idcard=" + idcard + ", design=" + design
+				+ ", dob=" + dob + ", email=" + email + ", password=" + password + ", branch=" + branch + ", city="
+				+ city + ", state=" + state + ", pincode=" + pincode + "]";
+	}
+	
 }

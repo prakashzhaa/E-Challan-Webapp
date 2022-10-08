@@ -23,8 +23,7 @@
 <body>
 	<%@include file="AllModule/navbar.jsp"%>
 	
-	
-	
+		
 	<div class="container-fluid back-img">
 	<h2 class="text-center text-primary">Electronic Challan Details</h2>
 	<div class="container-fluid">

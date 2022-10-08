@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +18,17 @@
 				<div class="card">
 					<div class="card-body">
 						<h3 class="text-center">Registration Details</h3>
-						<form action="registration" method="post">
+						<form action="RegistrationServlet" method="post">
+						
+						<c:if test="${not empty succMsg}">
+						<p class="text-center text-success">${succMsg}</p>
+						<c:remove var="succMsg" scope="session"/>
+						</c:if >
+						
+						<c:if test="${not empty failedMsg}">
+						<p class="text-center danger">${failedMsg}</p>
+						<c:remove var="failedMsg" scope="session"/>
+						</c:if>
 
 							<div class="form-group">
 								<label for="exampleInputName">Full Name</label> <input
@@ -51,7 +63,7 @@
 							<div class="form-group form-check">
 								<input type="checkbox" class="form-check-input"
 									id="exampleCheck1"> <label class="form-check-label"
-									for="exampleCheck1" name="checkbox">By clicking this you are agreed by
+									for="exampleCheck1">By clicking this you are agreed by
 									all our terms and conditions.</label>
 							</div>
 							<button type="submit" class="btn btn-primary">Submit</button>
