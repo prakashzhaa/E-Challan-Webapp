@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,17 +18,19 @@
 				<div class="card">
 					<div class="card-body">
 						<h3 class="text-center">Registration Details</h3>
-						<form action="RegistrationServlet" method="post">
 						
-						<c:if test="${not empty succMsg}">
-						<p class="text-center text-success">${succMsg}</p>
-						<c:remove var="succMsg" scope="session"/>
-						</c:if >
-						
-						<c:if test="${not empty failedMsg}">
-						<p class="text-center danger">${failedMsg}</p>
-						<c:remove var="failedMsg" scope="session"/>
-						</c:if>
+							<c:if test="${not empty succMsg }">
+								<p class="text-center text-success">${succMsg}</p>
+								<c:remove var="succMsg" scope="session" />
+
+							</c:if>
+
+							<c:if test="${not empty failedMsg }">
+								<p class="text-center text-danger">${failedMsg}</p>
+								<c:remove var="failedMsg" scope="session" />
+
+							</c:if>
+							<form action="RegistrationServlet" method="post">
 
 							<div class="form-group">
 								<label for="exampleInputName">Full Name</label> <input
@@ -40,21 +42,24 @@
 							<div class="form-group">
 								<label for="exampleInputIDNumber">ID Card</label> <input
 									type="text" class="form-control" id="exampleInputIDNumber"
-									placeholder="Enter Your Identity Card Number" required="required" name="idcard">
+									placeholder="Enter Your Identity Card Number"
+									required="required" name="idcard">
 							</div>
 							<div class="form-group">
 								<label for="exampleDesignumber">Designation</label> <input
 									type="text" class="form-control" id="exampleInputDesignumber"
-									placeholder="Enter Designation" required="required" name="design">
+									placeholder="Enter Designation" required="required"
+									name="design">
 							</div>
-							
+
 							<div class="form-group">
 								<label for="examplephonegnumber">Phone Number</label> <input
 									type="text" class="form-control" id="exampleInputnumber"
-									placeholder="Enter Your Phone Number" required="required" name="phone">
+									placeholder="Enter Your Phone Number" required="required"
+									name="phone">
 							</div>
 
-							
+
 							<div class="form-group">
 								<label for="exampleInputPassword1">Password</label> <input
 									type="password" class="form-control" id="exampleInputPassword1"

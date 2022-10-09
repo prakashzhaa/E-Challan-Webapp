@@ -1,11 +1,11 @@
 package com.officer.servlet;
 
 import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 
 import com.DAO.OfficerDAOImpl;
@@ -17,7 +17,7 @@ import jakarta.servlet.annotation.WebServlet;
 /**
  * Servlet implementation class RegistrationServlet
  */
-@WebServlet("/RegistrationServlet")
+@WebServlet("/registration")
 public class RegistrationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -43,8 +43,7 @@ public class RegistrationServlet extends HttpServlet {
 				String password = req.getParameter("password");
 			
 
-				// System.out.println(name+" "+idcard+" "+design+" "+phone+" "+password+"
-				// "+checkbox);
+			//	 System.out.println(name+" "+idcard+" "+design+" "+phone+" "+password);
 
 				Officer offsr = new Officer();
 				offsr.setName(name);
@@ -70,7 +69,8 @@ public class RegistrationServlet extends HttpServlet {
 						session.setAttribute("failedMsg","Something wrong on Server!!, Try again after some time...");
 						resp.sendRedirect("registration.jsp");						
 						
-					}
+					}	
+				
 				 
 
 			} catch (Exception e) {
