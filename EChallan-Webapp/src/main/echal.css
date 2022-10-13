@@ -1,0 +1,62 @@
+body{
+    background-image: url('./bg.jpg');
+
+}
+#stars
+{
+    display:flex;       
+    font-weight: bold;
+    text-decoration:underline;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+    font-size:50px;
+    width: 250px;
+    padding-top:5px;
+    padding-left:550px;
+    
+}
+
+#reg
+{
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: medium; 
+    text-align: center;   
+    align-content: center;
+    font-size:35x;
+    padding-top: 25px;
+}
+
+#style
+{
+    display:flex;   
+    font-size:15px;
+    justify-content: space-between;
+    margin-top: 15px;
+    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#places{
+    justify-content: space-between;
+
+}
+#style input{
+    margin: 1em;
+}
+
+.dob{
+    margin-left: 8rem;
+
+}
+::-webkit-input-placeholder { 
+    text-align: center;
+  }
+
+  form{
+    margin: auto;
+    background-color:#ddd;
+    
+    box-shadow: 0px 1px 7px;
+    padding: 25px;
+  }

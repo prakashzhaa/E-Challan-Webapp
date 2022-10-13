@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+        <div id ="stars" >
+             My Account
+                      
+        </div>            
+        <link rel="stylesheet" href="./echal.css" type="text/css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+    </head>
+    <body>
+        
+            <div id="reg">           
+                Register yourself !!      
+            </div>
+            
+            <div id ="style">
+                <form>
+                    <label for="name"> Name:</label>
+                    <input type="text" name="name"placeholder=" name " required>
+                <div>
+                    <label for="name"> Idcard:</label>
+                    <input type="text" name="name"placeholder=" id  " required>            
+                
+                
+                
+                
+                    <label for="name"> Designation</label>
+                    <input type="text" name="name"placeholder="  " required>
+                </div>
+                    
+                    
+                <div>
+                    <label for="gender-choice">Gender</label>
+                    <select name="gender-choice">
+                        <option value="0" selected disabled >Gender</option>
+                        <option value="1" > Male</option>
+                        <option value="2"> Female</option>
+                        <option value="3" >Other</option>
+                    </select>
+
+                    <label class="dob" for="birthday">DOB:</label>
+                    <input type="date" id="birthday" name="birthday">
+                </div>
+                <div>
+                    <label for="Gmail">G-mail</label>
+                    <input type="Gmail" name="gmail"placeholder="abc@gmail.com" ></input>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" />
+                    <i class="bi bi-eye-slash" id="togglePassword"></i>                
+                </div> 
+                <div>
+                    <label for="Branch">Branch</label>
+                    <input type="text" name="Branch" placeholder="" ></input>                    
+
+                    <label for="birthday">Contact No.</label>
+                    <input type="tel"  id="birthday" name="birthday" placeholder="123-456-789" maxlength="10" required>
+                </div>            
+
+
+                  
+                
+                <div id="places">
+                    
+                    <label for="Branch">City</label>
+                    <input type="text" name="Branch" placeholder="" ></input>
+                    <label for="Branch">State</label>
+                    <input type="text" name="Branch" placeholder="" ></input>
+                    <label for="Branch">Pincode</label>
+                    <input type="text" name="Branch" placeholder="" maxlength="6" required ></input>
+
+                    
+                </div> 
+                
+                <label for="agree"> I agreed to all the conditions!!</label>
+                <input type="checkbox" name="agree">
+                <button type="submit"> Submit</button>
+
+
+            </div>
+        
+            
+    </body>
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+const password = document.querySelector('#password');
+        togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye / eye slash icon
+    this.classList.toggle('bi-eye');
+});
+    </script>
+</html>
